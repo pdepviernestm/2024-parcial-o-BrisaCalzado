@@ -1,0 +1,21 @@
+import Intensamente.*
+
+describe "Todos los integrantes de un grupo viven un mismo evento" {
+  const furia = new Furia(intensidadElevada = 40)
+  const alegria = new Alegria(intensidadElevada = 80, intensidad = 100)
+  const tristeza = new Tristeza(intensidadElevada = 50, intensidad = 20)
+  const ansiedad = new Ansiedad(intensidadElevada = 20, intensidad = 30, momentosVergonzosos = 10)
+  var persona1 = new Persona(edad = 15, emociones = #{furia, alegria})
+  var persona2 = new Persona(edad = 20, emociones = #{tristeza, ansiedad})
+  var grupo = new Grupo(personas = #{persona1, persona2})
+  var evento = new Evento(impacto = 30, descripcion = "Evento de prueba")
+  test "La anisedad pasa a valer 20 y las otras emociones no cambian" {
+
+    grupo.vivirEvento(evento)
+    assert.equals(100, alegria.intensidad())
+    assert.equals(100, furia.intensidad())
+    assert.equals(20, tristeza.intensidad())
+    assert.equals(20, ansiedad.intensidad())
+  }
+
+}
