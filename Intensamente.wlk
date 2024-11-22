@@ -72,8 +72,13 @@ class Ansiedad inherits Emociones{
     intensidad -= intensidad/3  
   }
 
- // Los conceptos de herencia y polimorfismo son importantes 
- //debido a que
+  /* Los conceptos de herencia y polimorfismo fueron importantes debido a que permiten la reutilización del código. 
+  La herencia permite que una clase obtenga de otra sus métodos y variables, lo que evita la duplicación de código 
+  y facilita el mantenimiento. En este ejemplo, las clases de emociones heredan de la clase Emociones, 
+  compartiendo comportamientos comunes y modificandose cuando es necesario. Por otro lado, el polimorfismo
+  permite que diferentes objetos respondan a los mismos métodos, lo que simplifica la interacción con objetos 
+  de distintas clases. Esto se puede ver cuando se llama a los métodos puedeLiberarseEmocion y liberarse en las 
+  distintas emociones, permitiendo que cada emoción implemente su propia versión del comportamiento.*/
 }
 
 class Persona{
