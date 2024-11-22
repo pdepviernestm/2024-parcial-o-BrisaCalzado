@@ -67,9 +67,16 @@ class DesagradoYTemor inherits Emociones{
 }
 
 class Ansiedad inherits Emociones{
+  var momentosVergonzosos 
+
+  override method puedeLiberarseEmocion(){
+    return super() && 
+    momentosVergonzosos > 3
+  }
 
   override method liberarse(evento){
     intensidad -= intensidad/3  
+    momentosVergonzosos -= 1
   }
 
   /* Los conceptos de herencia y polimorfismo fueron importantes debido a que permiten la reutilización del código. 
