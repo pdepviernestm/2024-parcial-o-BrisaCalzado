@@ -28,7 +28,7 @@ class Furia inherits Emociones(intensidad = 100){
     return super() && 
     palabrotas.any{palabrota => palabrota.size() > 7}
   }
- 
+
   override method liberarse(evento){
     super(evento)
     palabrotas.remove(palabrotas.first())
@@ -36,7 +36,7 @@ class Furia inherits Emociones(intensidad = 100){
 }
 
 class Alegria inherits Emociones{
-  
+
   override method puedeLiberarseEmocion(){
     return super() && 
     eventosVividos %2 == 0
@@ -86,6 +86,7 @@ class Ansiedad inherits Emociones{
   permite que diferentes objetos respondan a los mismos métodos, lo que simplifica la interacción con objetos 
   de distintas clases. Esto se puede ver cuando se llama a los métodos puedeLiberarseEmocion y liberarse en las 
   distintas emociones, permitiendo que cada emoción implemente su propia versión del comportamiento.*/
+  
 }
 
 class Persona{
@@ -124,3 +125,4 @@ class Evento{
   var property impacto
   var descripcion 
 }
+
