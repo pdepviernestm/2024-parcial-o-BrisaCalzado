@@ -116,8 +116,4 @@ class Grupo{
 class Evento{
   var property impacto
   var descripcion 
-
-  method liberarEmocion(persona){
-    persona.vivirEvento(self)
-  }
 }
