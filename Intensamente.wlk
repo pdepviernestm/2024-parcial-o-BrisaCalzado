@@ -1,14 +1,10 @@
 class Emociones{
-  var intensidadElevada
+  var property intensidadElevada
   var property intensidad 
   var property eventosVividos = 0
 
   method sumarEvento(){
     eventosVividos += 1
-  }
-  
-  method cambiarIntensidadElevada(nuevaIntensidad){
-    intensidadElevada = nuevaIntensidad
   }
 
   method tieneIntensidadElevada(){
